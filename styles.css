@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --nav-blue: #0a0a23;
+  --main-white: #f0f0f0;
+  --main-blue: #1b1b32;
+  --main-red: #be3144;
+  --footer-blue: #2a2a40;
+}
+
+/* Base reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+
+body {
+  font-family: 'dm mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--main-white);
+  background-color: #000000;
+  user-select: none;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul,
+ol {
+  margin-left: 2em;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding:  5px 30px;
+  border: 2px inset var(--main-white);
+  border-radius: .5em;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1em;
+  box-shadow: 3px 5px 3px #5C5F5E;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-btn:hover {
+  transform: translateY(-5px);
+  background-color: #CDD0CB;
+  color : #000000;
+  border: 2px inset #5C5F5E;
+}
+
+.contact-btn:active {
+  transform: translateY(8px);
+  background-color: #5C5F5E;
+}
+
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background-color: black;
+  padding: 1em;
+  bottom: 0;
+  margin-top: auto;
+}
+
+footer>p {
+  margin-top: 1em;
+}
+
+.footer-header>p {
+  font-style: italic;
+}
+
+footer>hr {
+  border: .005rem solid #CDD0CB;
+}
+
+/* nav bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header h3 {
+  float: left;   
+  color: #f2f2f2;
+  }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.topnav a:hover {
+  color: #CDD0CB;
+  transform: translateY(-3px);
+}
+
+.topnav a:active {
+  color: #5C5F5E;
+  transform: translateY(5px);
+}
+
+@media (max-width: 28.75em) {
+  .topnav {
+    justify-content: center;
+  }
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background:black, url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+}
+
+.typed-out {
+  font-size: 5rem;
+  overflow: hidden;
+  border-right: .01em solid white;
+  width: 0;
+  white-space: nowrap;
+  animation:
+    typing 1s steps(20, end) forwards,
+    blink .8s infinite;
+}
+
+.greeting-container {
+  display: inline-block;
+  height: 6em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent
+  }
+
+  to {
+    border-color: white;
+  }
+}
+ 
+.web-dev {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #5C5F5E;
+}
+
+/* Details Section */
+
+.details-section {
+  background: black;
+  margin-right: 15vw;
+  margin-left: 15vw;
+  padding-bottom: 3em;
+}
+
+.details-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 6rem auto 6rem auto;
+  border-bottom: .1rem solid var(--main-white);
+}
+
+.my-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about {
+  font-size: 3rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+span {
+  font-size: 2rem;
+  text-align: left;
+  color: #5C5F5E;
+}
+
+.my-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: .01rem solid var(--main-blue);
+  box-shadow: 0 0 30px var(--footer-blue);
+  margin-left: 5em;
+}
+
+.hobbies,
+.skills,
+.priorities {
+  margin-top: 5em;
+}
+
+.hobbies-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-section>h2,
+.contact-section-header>h2 {
+  font-size: 4rem;
+}
+
+/* Contact Me page */
